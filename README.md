@@ -8,9 +8,8 @@ Se realizó un procesamiento de texto, eliminando stopwords, lematizando y norma
 El analizador de sentimientos se utilizó para medir la positividad en estos textos. Los resultados se almacenaron en las columnas 'ReviewSentiment' y 'TitleSentiment'.
 
 Paso 3
-Se eliminaron las filas con valores nulos para entrenar modelos (KNN, SVM y RandomForest) usando las columnas 'ReviewSentiment' y 'TitleSentiment' como variables predictoras y 'Rating' como variable objetivo. La precisión vario, KNN tuvo una baja precisión del 19.8%, mientras que SVM y RandomForest alcanzaron alrededor del 49.6%. 
-El RMSE fue de aproximadamente 2.29 para KNN y 2.68 para SVM y RandomForest.
+Se eliminaron las filas con valores nulos para entrenar modelos (KNN, SVM y RandomForest) usando las columnas 'ReviewSentiment' y 'TitleSentiment' como variables predictoras y 'Rating' como variable objetivo. La precisión vario, KNN tuvo una precisión del 49.6%, mientras que SVM y RandomForest alcanzaron alrededor del 49.6%. 
+El RMSE fue de aproximadamente 2.68 para KNN y 2.68 para SVM y RandomForest.
+Los resultados son iguales haciendo que cuaquier modelo sea util.
 
-Los modelos SVM y KNN entrenados se utilizaron para predecir las puntuaciones faltantes ('Rating'). Al comparar las predicciones con las reseñas originales, se observó que SVM tendía a predecir valores más altos para reseñas altamente positivas, mientras que KNN predijo valores ligeramente más bajos.
-
-los modelos mostraron un rendimiento limitado en la predicción de puntuaciones de reseñas, con precisiones modestas. SVM capturó mejor las reseñas altamente positivas, mientras que KNN fue más conservador en sus predicciones.
+los modelos mostraron un rendimiento limitado en la predicción de puntuaciones de reseñas, con precisiones modestas. Los 3 modelos capturaron mejor las reseñas altamente positivas.
